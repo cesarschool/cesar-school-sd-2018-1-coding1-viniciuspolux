@@ -9,13 +9,28 @@
  */
 void fizzBizz(int start, int end)
 {
-    printf("\nFizzBizz::START: %d, %d\n", start, end);
+    int x, y, z;
+    printf("Primeiro múltiplo a ser substituído: ");
+    scanf("%d", &x);
+    printf("\nSegundo múltiplo a ser substituído: ");
+    scanf("%d", &y);
+    printf("\nA contagem deve ser feita até o número: ");
+    scanf("%d", &z);
     
-    // TODO: Your code here!
-    // Ex.: printf("Fizz\n");
-    
-    printf("\nFizzBizz::END\n");
-}
+    int i = 1;
+    while(i<=z)
+    {
+        if (i%x==0 && i%y==0)
+            printf("FizzBuzz\n");
+        else if (i%x==0)
+            printf("Fizz\n");
+        else if (i%y==0)
+            printf("Buzz\n");
+        else
+            printf("%d\n", i);
+        i++;
+    }
+    return 0;
 
 int main()
 {
